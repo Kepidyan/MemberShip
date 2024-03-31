@@ -1,4 +1,3 @@
-debugger;
 
 class SimpleMembership {
     constructor(cost, month, type) {
@@ -58,11 +57,12 @@ document.getElementById('subscriptionForm').addEventListener('submit', (e) => {
 });
 
 function displayUsers(usersToDisplay) {
-    const usersList = document.getElementById('usersList');
-    usersList.innerHTML = '<h2>Subscribed Users</h2>';
+    const usersList = document.getElementById('info');
+    
     usersToDisplay.forEach(user => {
-        usersList.innerHTML += `<p>${user.firstName} - ${user.type} Membership ( ${user.cost}:$, Duration: ${user.month} months)</p>`;
+        usersList.innerHTML = `<p>${user.firstName} - ${user.type} Membership ( ${user.cost}:$, Duration: ${user.month} months)</p>`;
     });
+
 }
 
 // Display all users on initial load
