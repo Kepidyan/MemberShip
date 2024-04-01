@@ -65,5 +65,4 @@ function displayUsers(usersToDisplay) {
 
 }
 
-// Display all users on initial load
 displayUsers(users);
